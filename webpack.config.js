@@ -10,4 +10,14 @@ module.exports = {
 		// the name you wanna give to your bundle, by default, main.js
 		filename: "bundle.js",
 	},
+	//all loaders come here
+	module: {
+		rules: [
+			{
+				//every file (loader) that ends with css will be added
+				test: /\.css$/,
+				use: ["style-loader", "css-loader"],
+			},
+		],
+	},
 };
